@@ -1,131 +1,232 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Project Name
 
-Welcome USER_NAME,
+## Table of Contents
+- [Overview](#overview)
+- [User Experience (UX)](#user-experience-ux)
+- [Features](#features)
+- [Data Schema](#data-schema)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Overview
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+### Project Purpose
+- Clear description of the application's purpose
+- Value it provides to users
+- Target audience identification
+- Real-world problem it solves
 
-## Gitpod Reminders
+### Project Rationale
+- Justified rationale for development
+- Why this solution was chosen
+- How it addresses user needs and expectations
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+### User Stories
+- Comprehensive user stories for different user types
+- Acceptance criteria for each story
+- How the final application aligns with these stories
 
-A blue button should appear to click: _Make Public_,
+### Design Process
+- UX design work undertaken
+- Reasoning behind design decisions
+- Information hierarchy considerations
+- User control principles applied
+- Consistency across the application
+- Accessibility guidelines followed
 
-Another blue button should appear to click: _Open Browser_.
+### Wireframes and Mock-ups
+- Include wireframes, mock-ups, and diagrams
+- Design process documentation
+- Any design decisions that contravene accepted UX principles (with justification)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Front-end Design Principles
+- Information hierarchy implementation
+- User control features
+- Consistency across pages/sections
+- Confirmation and feedback systems
+- Accessibility compliance
 
-A blue button should appear to click: _Make Public_,
+## Features
 
-Another blue button should appear to click: _Open Browser_.
+### Existing Features
+- Main navigation menu and structured layout
+- User authentication (registration/login/logout)
+- Form validation and user feedback
+- CRUD functionality for all models
+- E-commerce payment system integration
+- Error handling and user notifications
+- Responsive design implementation
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Apps Structure
+- Description of each Django app
+- How each app represents a natural aspect of the project
+- Explanation of app separation logic
+- Shared data between apps (no duplication)
 
-To log into the Heroku toolbelt CLI:
+### Future Features
+- Planned enhancements
+- Additional functionality considerations
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Data Schema
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Database Design
+- Comprehensive data schema documentation
+- Entity Relationship Diagram (ERD)
+- Clear relationships between entities
+- Description of each model and its purpose
 
-### Connecting your Mongo database
+### Models
+- Detailed description of custom Django models
+- Field explanations and relationships
+- Data validation implemented
+- How models support user stories
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### CRUD Operations
+- Full CRUD functionality documentation
+- How actions are reflected in the user interface
+- Data validation and error handling
 
-------
+## Technologies Used
 
-## Release History
+### Languages
+- Python
+- HTML5
+- CSS3
+- JavaScript
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Frameworks and Libraries
+- Django (version)
+- Bootstrap/other CSS frameworks
+- JavaScript libraries used
 
-**June 18, 2024,** Add Mongo back into template
+### Database
+- Database system used
+- Configuration details
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Payment Processing
+- Stripe or other payment system integration
+- Security considerations
 
-**May 28 2024:** Fix Mongo and Links installs
+### Other Tools
+- Version control (Git)
+- Development environment
+- Deployment platform
+- External APIs used
 
-**April 26 2024:** Update node version to 16
+### External Code Attribution
+- Clear separation between custom code and external sources
+- Attribution for all external code via comments
+- Library dependencies listed
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Testing Strategy
+- Test-driven development approach
+- Testing procedures followed
+- Coverage level achieved
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Manual Testing
+- User story testing
+- Feature testing
+- Cross-browser compatibility
+- Responsive design testing
+- Accessibility testing
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Automated Testing
+- Unit tests implemented
+- Integration tests
+- Test results and coverage
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Validation
+- HTML validation (W3C)
+- CSS validation (Jigsaw)
+- JavaScript validation (JSHint)
+- Python code style (PEP8)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Bug Fixes
+- Known issues and their resolutions
+- Outstanding bugs (if any)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Deployment
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Live Site
+- Link to deployed application
+- Confirmation that deployed version matches development
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Deployment Process
+- Step-by-step deployment procedure
+- Database deployment documentation
+- Environment variables setup
+- Configuration file management
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Local Development Setup
+- Instructions for running locally
+- Requirements installation
+- Database setup
+- Environment configuration
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Security Considerations
+- Environment variables for sensitive data
+- Debug mode configuration
+- Password and secret key management
+- User permission levels
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Configuration Management
+- Settings file organization
+- Different configurations for different environments
+- Data store configuration location
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Version Control
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Git Usage
+- Repository structure
+- Commit message standards
+- Branching strategy
+- Development process documentation
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Development Process
+- Clear commit history showing TDD approach
+- Individual commits for each feature/fix
+- No large commits that obscure development process
+- Configuration file versioning
 
-------
+## Credits
 
-## FAQ about the uptime script
+### Content Sources
+- Text content attribution
+- Image sources and credits
+- Data sources
 
-**Why have you added this script?**
+### Code References
+- Tutorial or walkthrough acknowledgments
+- Stack Overflow solutions used
+- Documentation references
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Acknowledgments
+- Mentor/tutor guidance
+- Peer support
+- External resources that influenced the project
 
 ---
 
-Happy coding!
+## Additional Documentation Considerations
+
+### README Quality Standards
+- Well-structured markdown formatting
+- Consistent formatting throughout
+- Clear section organization
+- Professional presentation
+- Few errors in spelling and grammar
+- Easy to follow and understand
+
+### Evidence of Craftsmanship
+- Code organization and cleanliness
+- Framework conventions followed
+- Security best practices implemented
+- Comprehensive error handling
+- Professional-grade user interface
+- Original work (not copy of walkthrough projects)
