@@ -1,0 +1,47 @@
+<div id="main-nav">
+    <p>
+        <button class="btn" data-toggle="collapse" href="#shop-menu" type="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            SHOP
+        </button>
+    </p>
+    <div class="collapse" id="shop-menu">
+        <div class="card card-body">
+            <ul>
+                <li>NEW</li>
+                <li>BEST SELLERS</li>
+                <li>BAGS</li>
+                <li>
+                    <div class="dropdown">
+                        <a class="btn" data-toggle="collapse" href="{% url 'products' %}" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            CLOTHING
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>COATS + JACKETS</li>
+                                    <li>DRESSES</li>
+                                    <li>HOODIES + SWEATSHIRTS</li>
+                                    <li>PANTS</li>
+                                    <li>SHORTS</li>
+                                    <li>SKIRTS</li>
+                                    <li>TOPS</li>
+                                    <li>ALL CLOTHING</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>SWIM</li>
+                <li>ACCESSORIES</li>
+                <li>SALES</li>
+            </ul>
+            <ul>
+                <li>FQAS</li>
+                <li>SHIPPING + RETURNS</li>
+                <li>SIZING</li>
+            </ul>
+        </div>
+    </div>
+</div>
