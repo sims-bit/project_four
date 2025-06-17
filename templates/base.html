@@ -47,16 +47,12 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div>
-            <nav>
-                <div>
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h1>Weekend</h1>
-                    </a>
-                </div>
-                {% include 'includes/mobile_top_header.html' %}
-                {% include 'includes/main_nav.html '%}
-            </nav>
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h1>Weekend</h1>
+                </a>
+            </div>
             <!---Search bar from code institute walkthrough project-->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
@@ -100,7 +96,8 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
@@ -116,6 +113,16 @@
                 </ul>
             </div>
         </div>
+        <div class="row bg-white">
+            <nav  class="navbar navbar-expand-lg navbar-light w-100">
+                <div>
+
+                </div>
+                {% include 'includes/mobile_top_header.html' %}
+                {% include 'includes/main_nav.html '%}
+            </nav>
+        </div>
+      
     </header>
 
     <hr>
