@@ -54,7 +54,7 @@
                 </a>
             </div>
             <!---Search bar from code institute walkthrough project-->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q">
@@ -62,67 +62,93 @@
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search">
-                                        <p>SEARCH</p>
-                                        <!---SEARCH NEEDS TO BECOME A DROPDOWN-->
-                                    </i>
-                                </span>
-                            </button>
+                                        <p>SEARCH</p> -->
+            <!---SEARCH NEEDS TO BECOME A DROPDOWN-->
+            </i>
+            </span>
+            </button>
+        </div>
+        </div>
+        </form>
+        </div>
+        <!--- Side menu-->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                <li class="list-inline-item dropdown">
+                    <a class="text-black nav-link" href="#" id="search-dropdown" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="text-center">
+                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <p class="my-0">SEARCH</p>
                         </div>
+                    </a>
+                    <div class="dropdown-menu border-0 col-12 col-lg-4 my-auto py-1 py-lg-0"
+                        aria-labelledby="search-dropdown">
+                        <!---Search bar from code institute walkthrough project-->
+                        <form method="GET" action="{% url 'products' %}">
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search">
+                                                <p>SEARCH</p>
+                                            </i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-            <!--- Side menu-->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+
+                </li>
+                <li class="list-inline-item dropdown">
+                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="text-center">
+                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <p class="my-0">ACCOUNT</p>
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if item_number_in_basket %}
-                                    ${{ item_number_in_basket|floatformat:1 }}
-                                    {% else %}
-                                    (0)
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Product Management</a>
+                        {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="list-inline-item">
+                    <!-- the a link is talking about the old grand total variable for the basket, check this melon-->
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <div class="text-center">
+                    
+                            <p class="my-0">
+                                CART
+                                {% if item_number_in_basket %}
+                                ${{ item_number_in_basket|floatformat:1 }}
+                                {% else %}
+                                (0)
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
         </div>
         <div class="row bg-white">
-            <nav  class="navbar navbar-expand-lg navbar-light w-100">
-                <div>
-
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
                 {% include 'includes/mobile_top_header.html' %}
                 {% include 'includes/main_nav.html '%}
             </nav>
         </div>
-      
+
     </header>
 
     <hr>
