@@ -92,6 +92,8 @@
 
 ## Technologies Used
 
+https://jsonformatter.org/ 
+
 ### Languages
 - Python
 - HTML5
