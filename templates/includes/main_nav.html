@@ -1,48 +1,67 @@
-<div id="main-nav">
-    <p>
-        <button class="btn" data-toggle="collapse" href="#shop-menu" type="button" aria-expanded="false"
-            aria-controls="collapseExample">
-            SHOP
-        </button>
-    </p>
-    <div class="collapse" id="shop-menu">
-        <div class="card card-body">
-            <ul>
-                <a href="{% url 'products' %}?category=new"><li>NEW</li></a>
-                <a href="{% url 'products' %}?category=best_sellers"><li>BEST SELLERS</li></a>
-                <a href="{% url 'products' %}?category=bags"><li>BAGS</li></a>
-                <li>
-                    <div class="dropdown">
-                        <a class="btn" data-toggle="collapse" href="{% url 'products' %}" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            CLOTHING
-                        </a>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                                <ul>
-                                    <a href="{% url 'products' %}?category=coats_jackets"><li>COATS + JACKETS</li></a>
-                                    <a href="{% url 'products' %}?category=dresses"><li>DRESSES</li></a>
-                                    <a href="{% url 'products' %}?category=hoodies_sweatshirts"><li>HOODIES + SWEATSHIRTS</li></a>
-                                    <a href="{% url 'products' %}?category=pants"><li>PANTS</li></a>
-                                    <a href="{% url 'products' %}?category=shorts"><li>SHORTS</li></a>
-                                    <a href="{% url 'products' %}?category=skirts"><li>SKIRTS</li></a>
-                                    <a href="{% url 'products' %}?category=tops"><li>TOPS</li></a>
-                                    <a href="{% url 'products' %}?category=coats_jackets, dresses, hoodies_sweatshirts, pants, shorts, skirts, tops"><li>ALL CLOTHING</li></a>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <a href="{% url 'products' %}?category=swim"><li>SWIM</li></a>
-                <a href="{% url 'products' %}?category=accessories"><li>ACCESSORIES</li></a>
-                <a href="{% url 'products' %}?category=sales"><li>SALES</li></a>
-            </ul>
-            <ul>
-                <li>FQAS</li>
-                <li>SHIPPING + RETURNS</li>
-                <li>SIZING</li>
-            </ul>
+<ul>
+    <a href="{% url 'products' %}?category=new">
+        <li>NEW</li>
+    </a>
+    <a href="{% url 'products' %}?category=best_sellers">
+        <li>BEST SELLERS</li>
+    </a>
+    <a href="{% url 'products' %}?category=bags">
+        <li>BAGS</li>
+    </a>
+    <li>
+        <div class="dropdown">
+            <a class="btn" data-toggle="collapse" href="{% url 'products' %}" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                CLOTHING
+            </a>
+            <div class="collapse" id="collapseExample">
+
+                <ul>
+                    <a href="{% url 'products' %}?category=coats_jackets">
+                        <li>COATS + JACKETS</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=dresses">
+                        <li>DRESSES</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=hoodies_sweatshirts">
+                        <li>HOODIES + SWEATSHIRTS</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=pants">
+                        <li>PANTS</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=shorts">
+                        <li>SHORTS</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=skirts">
+                        <li>SKIRTS</li>
+                    </a>
+                    <a href="{% url 'products' %}?category=tops">
+                        <li>TOPS</li>
+                    </a>
+                    <a
+                        href="{% url 'products' %}?category=coats_jackets, dresses, hoodies_sweatshirts, pants, shorts, skirts, tops">
+                        <li>ALL CLOTHING</li>
+                    </a>
+                </ul>
+
+            </div>
         </div>
-    </div>
-  
-</div>
+    </li>
+    <a href="{% url 'products' %}?category=swim">
+        <li>SWIM</li>
+    </a>
+    <a href="{% url 'products' %}?category=accessories">
+        <li>ACCESSORIES</li>
+    </a>
+    <a href="{% url 'products' %}?category=sales">
+        <li>SALES</li>
+    </a>
+</ul>
+<ul>
+    <li>FQAS</li>
+    <li>SHIPPING + RETURNS</li>
+    <li>SIZING</li>
+</ul>
+
+
+
