@@ -2,9 +2,6 @@ from django.db import models
 
 # Models from code institute walk through project 
 
-from django.db import models
-
-
 class Category(models.Model):
 
     class Meta:
