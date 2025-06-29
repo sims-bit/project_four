@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -48,65 +48,21 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
+    <header id="the-header" class="container-fluid fixed-top text-right">
+        <div id="delivery-banner" class="row bg-white text-center">
+            <div class="col bg-black text-body">
                 <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
             </div>
         </div>
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h1>Weekend</h1>
-                </a>
-            </div>
-
-            <li class="list-inline-item dropdown">
-                <a class="text-black nav-link" href="#" id="shop-menu" data-toggle="dropdown" aria-haspopup="true"
+        <div class="row pt-lg-2 d-none d-lg-flex">
+            <li class="list-inline-item dropdown nav-item">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    SHOP
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="shop-menu">
-                    <a href="{% url 'products' %}?category=new" class="dropdown-item">
-                        NEW
-                    </a>
-                    <a href="{% url 'products' %}?category=best_sellers" class="dropdown-item">
-                        BEST SELLERS
-                    </a>
-                    <a href="{% url 'products' %}?category=bags" class="dropdown-item">
-                        BAGS
-                    </a>
-                    <a class="text-black nav-link list-inline-item dropdown" href="#" id="clothing-menu"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        CLOTHING
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="clothing-menu">
-                        <a href="{% url 'products' %}?category=coats_jackets" class="dropdown-item">
-                            COATS + JACKETS
-                        </a>
-                        <a href="{% url 'products' %}?category=dresses" class="dropdown-item">
-                            DRESSES
-                        </a>
-                        <a href="{% url 'products' %}?category=hoodies_sweatshirts" class="dropdown-item">
-                            HOODIES + SWEATSHIRTS
-                        </a>
-                        <a href="{% url 'products' %}?category=pants" class="dropdown-item">
-                            PANTS
-                        </a>
-                        <a href="{% url 'products' %}?category=shorts" class="dropdown-item">
-                            SHORTS
-                        </a>
-                        <a href="{% url 'products' %}?category=skirts" class="dropdown-item">
-                            SKIRTS
-                        </a>
-                        <a href="{% url 'products' %}?category=tops" class="dropdown-item">
-                            TOPS
-                        </a>
-                        <a
-                            href="{% url 'products' %}?category=coats_jackets, dresses, hoodies_sweatshirts, pants, shorts, skirts, tops">
-                            ALL CLOTHING
-                        </a>
+                    <div class="col-auto text-center">
+                        <p class="my-0">SHOP</p>
                     </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
                     <a href="{% url 'products' %}?category=new" class="dropdown-item">
                         NEW
                     </a>
@@ -115,23 +71,64 @@
                     </a>
                     <a href="{% url 'products' %}?category=bags" class="dropdown-item">
                         BAGS
+                    </a>
+                    <a href="{% url 'products' %}?category=coats_jackets" class="dropdown-item">
+                        COATS + JACKETS
+                    </a>
+                    <a href="{% url 'products' %}?category=dresses" class="dropdown-item">
+                        DRESSES
+                    </a>
+                    <a href="{% url 'products' %}?category=hoodies_sweatshirts" class="dropdown-item">
+                        HOODIES + SWEATSHIRTS
+                    </a>
+                    <a href="{% url 'products' %}?category=pants" class="dropdown-item">
+                        PANTS
+                    </a>
+                    <a href="{% url 'products' %}?category=shorts" class="dropdown-item">
+                        SHORTS
+                    </a>
+                    <a href="{% url 'products' %}?category=skirts" class="dropdown-item">
+                        SKIRTS
+                    </a>
+                    <a href="{% url 'products' %}?category=tops" class="dropdown-item">
+                        TOPS
+                    </a>
+                    <a href="{% url 'products' %}?category=coats_jackets,dresses,hoodies_sweatshirts,pants,shorts,skirts,tops,swim"
+                        class="dropdown-item">
+                        ALL CLOTHING
+                    </a>
+                    <a href="{% url 'products' %}?category=new" class="dropdown-item">
+                        NEW
+                    </a>
+                    <a href="{% url 'products' %}?category=best_sellers" class="dropdown-item">
+                        BEST SELLERS
+                    </a>
+                    <a href="{% url 'products' %}?category=bags" class="dropdown-item">
+                        BAGS
+                    </a>
+                    <a href="{% url 'products' %}?category=swim" class="dropdown-item">
+                        SWIM
+                    </a>
+                    <a href="{% url 'products' %}?category=accessories" class="dropdown-item">
+                        ACCESSORIES
                     </a>
                 </div>
             </li>
-
-
-            <li class="list-inline-item dropdown">
-                <a class="text-black nav-link" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+            <div>
+                <a href="{% url 'home' %}" class="nav-link text-center main-logo-link col-8">
+                    <h1>Weekend</h1>
+                </a>
+            </div>
+            <li class="list-inline-item dropdown nav-item">
+                <a class="text-black nav-link " href="#" id="search-dropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
-                        <div><i class="fas fa-user fa-lg"></i></div>
                         <p class="my-0">SEARCH</p>
                     </div>
                 </a>
-                <div class="dropdown-menu border-0 col-12 col-lg-4 my-auto py-1 py-lg-0"
-                    aria-labelledby="search-dropdown">
+                <div class="dropdown-menu row my-auto py-1 py-lg-0" aria-labelledby="search-dropdown">
                     <!---Search bar from code institute walkthrough project-->
-                    <form method="GET" action="{% url 'products' %}">
+                    <form method="GET" action="{% url 'products' %}" id="search-form">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0" type="text" name="q">
                             <div class="input-group-append">
@@ -146,13 +143,11 @@
                         </div>
                     </form>
                 </div>
-
             </li>
-            <li class="list-inline-item dropdown">
+            <li class="list-inline-item dropdown nav-item">
                 <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <div class="text-center">
-                        <div><i class="fas fa-user fa-lg"></i></div>
                         <p class="my-0">ACCOUNT</p>
                     </div>
                 </a>
@@ -169,16 +164,15 @@
                     {% endif %}
                 </div>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item nav-item">
                 <!-- the a link is talking about the old grand total variable for the basket, check this melon-->
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link"
                     href="{% url 'view_bag' %}">
                     <div class="text-center">
-
                         <p class="my-0">
                             BAG
-                            {% if item_number_in_basket %}
-                            ${{ item_number_in_basket|floatformat:1 }}
+                            {% if grand_total %}
+                            £{{ grand_total|floatformat:2 }}
                             {% else %}
                             (0)
                             {% endif %}
@@ -186,34 +180,33 @@
                     </div>
                 </a>
             </li>
-            </ul>
-        </div>
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                {% include 'includes/mobile_top_header.html' %}
+                {% include 'includes/mobile-top-header.html' %}
             </nav>
         </div>
+
+
     </header>
 
     {% if messages %}
-  <div class="message-container">
-    
-      {% for message in messages %}
-          {% with message.level as level %}
-              {% if level == 40 %}
-                  {% include 'includes/toasts/toast_error.html' %}
-              {% elif level == 30 %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-              {% elif level == 25 %}
-                  {% include 'includes/toasts/toast_success.html' %}
-              {% else %}
-                  {% include 'includes/toasts/toast_info.html' %}
-              {% endif %}
-          {% endwith %}
-      {% endfor %}
-  </div>
-  {% endif %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
 
     {% block page_header %}
     {% endblock %}
@@ -222,9 +215,9 @@
     {% endblock %}
 
     {% block postloadjs %}
-    
-      <script type="text/javascript">
-    $('.toast').toast('show');
+
+    <script type="text/javascript">
+        $('.toast').toast('show');
     </script>
 
     {% endblock %}
