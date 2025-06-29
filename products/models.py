@@ -1,6 +1,6 @@
 from django.db import models
 
-# Models from code institute walk through project 
+# Modelsfrom code institute walk through project, including edited in original field
 
 class Category(models.Model):
 
