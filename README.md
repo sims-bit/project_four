@@ -59,9 +59,7 @@ The site features a curated collection of clothing and accessories ???
 - Consistency across the application
 - Accessibility guidelines followed
 
-### Wireframes and Mock-ups
-
-
+### Wireframes
 <details>
     <summary>Entity Relationship Diagram (ERD)</summary>
     <br>
@@ -73,7 +71,7 @@ The site features a curated collection of clothing and accessories ???
 - Any design decisions that contravene accepted UX principles (with justification)
 
 ### Front-end Design Principles
-- Information hierarchy implementation
+- Information hierarchy implementation?????
 - User control features
 - Consistency across pages/sections
 - Confirmation and feedback systems
@@ -91,22 +89,27 @@ The site features a curated collection of clothing and accessories ???
 - Responsive design implementation
 
 ### Apps Structure
-<strong>Description of each Django app</strong>
+<strong>My apps</strong>
 - Home
 - Products
 - Bag
 - Checkout
 - Profiles 
+<br>
+
 <strong>How each app represents a natural aspect of the project</strong>
+
 <strong>Explanation of app separation logic</strong>
+
 <strong>Shared data between apps (no duplication)</strong>
 
 ### Future Features
 - Planned enhancements
 - Additional functionality considerations
 
+<br>
 4. Data Schema
-
+<br>
 <details>
     <summary>Entity Relationship Diagram (ERD)</summary>
     <br>
@@ -233,8 +236,6 @@ image (bigint): Direct image file storage
 <strong>Data Validation/ Security with Stripe</strong>
 
 
-
-
 ### Models
 - Detailed description of custom Django models
 - Field explanations and relationships
@@ -252,6 +253,9 @@ Site user/ client CRUD functionality
 5.  Technologies Used
 
 https://jsonformatter.org/ 
+https://imagecolorpicker.com/
+https://unsplash.com/photos/a-delicate-painting-of-a-white-hyacinth-mn81rQG7wIQ 
+https://www.w3schools.com/ 
 
 ### Languages
 - Python
@@ -277,7 +281,11 @@ https://jsonformatter.org/
 - Development environment
 - Deployment platform
 
+
+
 ### Requirements 
+
+
 
 ### External Code Attribution
 - Clear separation between custom code and external sources
@@ -287,21 +295,56 @@ https://jsonformatter.org/
 5.  Testing
 
 ### Testing Strategy
+
+| Test Category | Test Case | Test Description | Status |
+|---  | --- | --- | --- |
+|Home Page Functionality| | | |
+|Navigation | Header Navigation  | All links functional, pages load correctly | PASS|
+|Layout | Responsive Design | Layout adapts properly to screen sizes | PASS|
+|Content | Hero Image Loading | All images load quickly and display properly |PASS|
+|Navigation | Dropdown Menu | All menus dropdown and collapse as intended |PASS|
+|Products | | |
+|Product Navigation/ Sorting functionality | Prod |   |
+|Product Display | Price Display | Prices display correctly in GDP |PASS|
+|Product Display | Image Display | Images are high quality and load properly |PASS|
+|Product Details | Individual Product Page | Product page loads with complete information |PASS |
+|Product Options | Size Selection | Size options work correctly|PASS |
+|Product Actions | Add to Cart | Product adds to bag successfully |PASS |
+|Shopping bag | | | |
+|Bag Managment |View Bag | Bag displays correct items and quantities |PASS |
+|Bag Managment | Update Quantitites | Quantities of items and grand total of shopping bag are updated correctly |PASS |
+|Bag Managment | Removing Items | Items remove successfully from bag |PASS |
+|Bag Calculations | Subtotal calculation | Calculations are accurate |PASS |
+|Checkout | | | |
+|Checkout procedure | Checkout Flow | Checkout process flows smoothly |PASS |
+|Form validation | Required Fields | Proper Validation and error message displays |PASS |
+|Payment | Payment Methods | Payment Methods work and are secure |PASS |
+|Search and Filtering | | | |
+|Search | Site Search |Search returns relevant results |PASS |
+|Filtering |Category Filtering |Filters work correctly and update results |PASS |
+
+
+
+
+|Performace | | | |
+|---  | --- | --- |
+|Loading Speed |Page load times |Pages load within acceptable time |PASS |
+|Accessibility | | | |
+| | | | |
+
+<strong>Lighthouse</strong>
+
+
 - Test-driven development approach
 - Testing procedures followed
 - Coverage level achieved
 
-### Manual Testing
-- User story testing
-- Feature testing
-- Cross-browser compatibility
 - Responsive design testing
 - Accessibility testing
 
-### Automated Testing
-- Unit tests implemented
-- Integration tests
-- Test results and coverage
+### Responsive Testing
+- Browsers: Chrome, Firefox, Safari, Edge
+- Devices: Desktop, Tablet, Mobile
 
 ### Validation
 
@@ -335,6 +378,9 @@ https://jsonformatter.org/
 
 ### Bug Fixes
 - Known issues and their resolutions
+
+BUGS
+
 - Outstanding bugs (if any)
 
 6.  Deployment
@@ -343,8 +389,54 @@ https://jsonformatter.org/
 - Link to deployed application
 - Confirmation that deployed version matches development
 
-### Deployment Process
-- Step-by-step deployment procedure
+### Heroku Deployment Process
+
+    Database Setup - Navigate to PostgreSQL from Code Institute - Enter in your student email address and click submit - Wait whilst your database is created - Your database is sucessfully created, you will receive an email with the database link
+
+    Log into Heroku and create a new app with a unique name. This will be added to the allowed hosts in the project settings.
+
+    Following on, within the setting tab of your app:
+
+    Locate the 'Reveal Config Vars', in which we shall be adding a new Config Var called DISABLE_COLLECTSTATIC, assign it the value of 1 and then save it via clicking add. This will be removed when relasing for production.
+
+    Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols. (You can use an online generator for this) Click add to save.
+
+    Add a new Config Var called DATABASE_URL and paste in the value of your Code institute PostgreSQL database,click Add to save.
+
+    In the top layer of your directory create a file env.py, this file needs to be then added to the .gitignore file as this is where the DATABASE_URL and SECRET_KEY variable will be stored.
+
+    The settings.py should be updated to use the DATABASE_URL and SECRET_KEY environment variable values:
+
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+      import env
+
+Replace secret key placeholder with:
+
+  SECRET_KEY = os.environ.get('SECRET_KEY')
+
+Create a Procfile within the top level of your directory
+
+Within the Procfile add:
+
+  web: gunicorn project_name.wsgi
+
+    Save all files and Make Migrations: python3 manage.py migrate
+
+    Deploy the branch, when finished click on Open App to visit the live site.
+
+
+Connect your Github Repo to the Heroku App
+
+- Navigate to your deploy tab within your Heroku App
+- Select Github as the deployment method, and if prompted confirm that you want to connect to Github. Enter and search for the name of your chosen repository and click on Connect to link them. 
+- Return to the deploy tab of the app each time you push changes to Github. Scroll to the bottom and Manually deploy the app by clicking on 'Deploy Branch'. 
+
+
+
+
+
 - Database deployment documentation
 - Environment variables setup
 - Configuration file management
