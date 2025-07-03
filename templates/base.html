@@ -164,7 +164,7 @@
             </li>
             <li class="list-inline-item nav-item">
                 <!-- the a link is talking about the old grand total variable for the basket, check this melon-->
-                <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link"
+                <a class="nav-link"
                     href="{% url 'view_bag' %}">
                     <div class="text-center">
                         <p class="my-0">
@@ -184,8 +184,6 @@
                 {% include 'includes/mobile-top-header.html' %}
             </nav>
         </div>
-
-
     </header>
 
     {% if messages %}
@@ -207,20 +205,17 @@
     {% endif %}
 
     {% block page_header %}
-    {% endblock %}
+    {% endblock %}      
 
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
-
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
 
     {% endblock %}
-
-
 </body>
 
 </html>
