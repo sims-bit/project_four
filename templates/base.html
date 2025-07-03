@@ -163,7 +163,6 @@
                 </div>
             </li>
             <li class="list-inline-item nav-item">
-                <!-- the a link is talking about the old grand total variable for the basket, check this melon-->
                 <a class="nav-link"
                     href="{% url 'view_bag' %}">
                     <div class="text-center">
@@ -210,6 +209,10 @@
     {% block content %}
     {% endblock %}
 
+    <!-- <footer>
+        <p>TEST</p>
+    </footer> -->
+    
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
