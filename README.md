@@ -13,43 +13,18 @@
 1. Overview
 
 ## Project Purpose
-<strong>Clear description of the application's purpose</strong>
-This is an online fashion retail website specializing in women's clothing with a focus on???
-The site features a curated collection of clothing and accessories ???
+This is an online fashion retail website specializing in women's clothing with a focus on a particular modern take on a cottagecore style. With the site featuring a curated collection of clothing and accessories.
 
-<strong>Value it provides to users</strong>
--Offers a carefully curated selection of cohesive, feminine clothing pieces
-- Delivers a seamless shopping experience with professional product photography
-- Offers pieces that coordinate well together, making outfit planning easier
+With the fashion e-commerce space dominated by fast fashion retailers offering overwhelming product selections that often lack cohesion. There's a clear opportunity for a curated, quality-focused alternative.
+The value the site provides to users is that it offers users a carefully curated selection of cohesive, clothing and accessory pieces, making outfit planning easier. Whilst delivering a seamless shopping experience with professional product photography, 
 
-<strong>Target audience identification</strong>
-- Women who value quality over fast fashion trends
-- Those looking for coordinated wardrobe pieces rather than individual statement items
+<strong>Target audience</strong><br>
+The ideal target audience for the site is individuals who value quality over fast fashion trends, those looking for coordinated wardrobe pieces that could also be utilized as individual statement items.
 
-<strong>Real-world problem it solves</strong>
-- Eliminates the overwhelming choice paralysis common in fast fashion retail
-- Addresses the difficulty of finding cohesive, feminine clothing pieces that work together???
-- Solves the problem of inconsistent quality and style across different fashion retailers???
-- Provides an alternative to mass-market fashion for women seeking more distinctive, modest styling???
-
-### Project Rationale
-<strong>Justified rationale for development</strong>
-- The fashion e-commerce space is dominated by fast fashion retailers offering overwhelming product selections that often lack cohesion. There's a clear opportunity for a curated, quality-focused alternative that serves customers seeking ???
-- Growing consumer awareness about sustainable fashion and quality clothing has created demand for retailers that prioritize curation over volume, justifying a premium positioning strategy.
-
-<strong>Why this solution was chosen</strong>
-- The minimilst design interface prioritizes product visibility and easy navigation over flashy design elements, allowing the clothing to be the focal point and reducing visual clutter that can overwhelm users.
-- A cohesive identity creates a strong brand identity that 
-
-<strong>How it addresses user needs and expectations</strong>
-- Streamlined shopping experience 
+<strong>Real-world problem solving</strong><br>
+With growing consumer awareness about sustainable fashion and quality clothing has created demand for retailers that prioritize curation over volume, justifying a premium positioning strategy. This site eliminates the overwhelming choice paralysis common in fast fashion retail, by paying concious effort to maintain a clear brand identity, this inturn provides an alternative to mass-market fashion and leaning away from being another fast fashion brand with all the environmental issues of mass production. Whilst maintaining consistant high quality.
 
 2. User Experience (UX)
-
-### User Stories
-- Comprehensive user stories for different user types
-- Acceptance criteria for each story
-- How the final application aligns with these stories
 
 ### Design Process
 - UX design work undertaken
@@ -58,6 +33,11 @@ The site features a curated collection of clothing and accessories ???
 - User control principles applied
 - Consistency across the application
 - Accessibility guidelines followed
+
+Streamlined shopping experience 
+
+- The minimilst design interface prioritizes product visibility and easy navigation over flashy design elements, allowing the clothing to be the focal point and reducing visual clutter that can overwhelm users.
+- A cohesive identity creates a strong brand identity that
 
 ### Wireframes
 <details>
