@@ -143,13 +143,13 @@
                 </div>
             </div>
             <div class="list-inline-item dropdown nav-item">
-                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                <a class="text-black nav-link" href="#" id="account-options" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <div class="text-center">
                         <p class="my-0">ACCOUNT</p>
                     </div>
                 </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                <div class="dropdown-menu border-0" aria-labelledby="account-options">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
