@@ -1,14 +1,14 @@
 # Project Name
 
 ## Table of Contents
-- [Overview](#overview)
-- [User Experience (UX)](#user-experience-ux)
-- [Features](#features)
-- [Data Schema](#data-schema)
-- [Technologies Used](#technologies-used)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Credits](#credits)
+- Overview 
+- User Experience (UX)
+- Features
+- Data Schema
+- Technologies Used
+- Testing
+- Deployment
+- Credits
 
 1. Overview
 
@@ -37,36 +37,27 @@ With growing consumer awareness about sustainable fashion and quality clothing h
 Streamlined shopping experience 
 
 - The minimilst design interface prioritizes product visibility and easy navigation over flashy design elements, allowing the clothing to be the focal point and reducing visual clutter that can overwhelm users.
-- A cohesive identity creates a strong brand identity that
+- A cohesive identity creates a strong brand identity that ????
 
-### Wireframes
-<details>
-    <summary>Entity Relationship Diagram (ERD)</summary>
-    <br>
-    <img src="" alt="">
-    </details>
 
-- Include wireframes, mock-ups, and diagrams
-- Design process documentation
-- Any design decisions that contravene accepted UX principles (with justification)
+- User control features -- adding and subtacting to the bag, personal information, ability to create a user profile 
 
-### Front-end Design Principles
-- Information hierarchy implementation?????
-- User control features
-- Consistency across pages/sections
-- Confirmation and feedback systems
-- Accessibility compliance
+
+With toasts keeping in line with the chosen aesthetics of the site, confirmation and feedback toasts from the system???
+
 
 3. Features
 
-### Existing Features
-- Main navigation menu and structured layout
-- User authentication (registration/login/logout)
-- Form validation and user feedback
-- CRUD functionality for all models
-- E-commerce payment system integration
-- Error handling and user notifications
-- Responsive design implementation
+    - Main navigation and structured layout     
+    - User authentication (registration/login/logout)
+    - Form validation and user feedback
+    - E-commerce payment system integration using stripe
+    - Error handling and user notifications
+    - Responsive design implementation
+
+### Future Features
+- Planned enhancements
+- Additional functionality considerations ?????
 
 ### Apps Structure
 <strong>My apps</strong>
@@ -83,9 +74,6 @@ Streamlined shopping experience
 
 <strong>Shared data between apps (no duplication)</strong>
 
-### Future Features
-- Planned enhancements
-- Additional functionality considerations
 
 <br>
 4. Data Schema
@@ -93,7 +81,7 @@ Streamlined shopping experience
 <details>
     <summary>Entity Relationship Diagram (ERD)</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/weekend_erd-diagram.jpg" alt="">
     </details>
 
 - Checkout - Order Model:
@@ -106,93 +94,6 @@ An extended user profile model that stores default customer information for stre
 A simple categorization model for organizing products with both internal and customer-friendly naming conventions.
 - Products - Product Model:
 The comprehensive product catalog model containing all product information including variants, pricing, descriptions, and media assets.
-
-<strong>Field Explanations and Relationships</strong>
-
-- Order Model Fields:
-
-order_number (char): Unique identifier for tracking orders
-user_profile (bigint): Foreign key linking to User Profile for registered customers
-Customer details: full_name, email, phone_number for order fulfillment
-Address fields: Complete delivery address breakdown for shipping
-Financial fields: delivery_cost, order_total, grand_total (decimal) for accurate pricing
-Payment processing: original_bag (text), stripe_pid (char) for transaction tracking
-date field for order timestamp
-
-- OrderLineItem Model Fields:
-
-order (char): Foreign key reference to parent Order
-product (char): Foreign key reference to specific Product
-product_size (char): Product variant specification
-quantity (bigint): Number of items ordered
-line_item_total (decimal): Calculated total for this line item
-
-- User Profile Model Fields:
-
-user (char): One-to-one relationship with Django's built-in User model
-Default address fields: Pre-populated shipping information for faster checkout
-All address fields mirror the Order model for consistency
-
-- Category Model Fields:
-
-name (char): Internal category identifier
-friendly_name (char): Customer-facing display name
-
-- Product Model Fields:
-
-category (char): Foreign key to Category model
-sku (char): Stock keeping unit for inventory management
-name (char): Product title
-colour (char): Product color variant
-description (text): Detailed product information
-has_sizes (boolean): Indicates if product has size variants
-price (decimal): Product pricing
-rating (decimal): Customer rating system
-image_url (varchar): External image reference
-image (bigint): Direct image file storage
-
-<strong>Field Explanations and Relationships</strong>
-Order Model Fields:
-
-order_number (char): Unique identifier for tracking orders
-user_profile (bigint): Foreign key linking to User Profile for registered customers
-Customer details: full_name, email, phone_number for order fulfillment
-Address fields: Complete delivery address breakdown for shipping
-Financial fields: delivery_cost, order_total, grand_total (decimal) for accurate pricing
-Payment processing: original_bag (text), stripe_pid (char) for transaction tracking
-date field for order timestamp
-
-OrderLineItem Model Fields:
-
-order (char): Foreign key reference to parent Order
-product (char): Foreign key reference to specific Product
-product_size (char): Product variant specification
-quantity (bigint): Number of items ordered
-line_item_total (decimal): Calculated total for this line item
-
-User Profile Model Fields:
-
-user (char): One-to-one relationship with Django's built-in User model
-Default address fields: Pre-populated shipping information for faster checkout
-All address fields mirror the Order model for consistency
-
-Category Model Fields:
-
-name (char): Internal category identifier
-friendly_name (char): Customer-facing display name
-
-Product Model Fields:
-
-category (char): Foreign key to Category model
-sku (char): Stock keeping unit for inventory management
-name (char): Product title
-colour (char): Product color variant
-description (text): Detailed product information
-has_sizes (boolean): Indicates if product has size variants
-price (decimal): Product pricing
-rating (decimal): Customer rating system
-image_url (varchar): External image reference
-image (bigint): Direct image file storage
 
 <strong>Data Validation</strong>
 
@@ -211,31 +112,15 @@ image (bigint): Direct image file storage
 
 - User profile link: Order model validates user_profile exists if provided (for registered users)
 
-    ERROR HANDLING
 
 <strong>Data Validation/ Security with Stripe</strong>
 
 
-### Models
-- Detailed description of custom Django models
-- Field explanations and relationships
-- Data validation implemented
-- How models support user stories
-
 ### CRUD Operations
-- Full CRUD functionality documentation
-- How actions are reflected in the user interface
-- Data validation and error handling
-
-Shop owner CRUD functionality 
-Site user/ client CRUD functionality
+- Shop owner CRUD functionality 
+- Site user/ client CRUD functionality
 
 5.  Technologies Used
-
-https://jsonformatter.org/ 
-https://imagecolorpicker.com/
-https://unsplash.com/photos/a-delicate-painting-of-a-white-hyacinth-mn81rQG7wIQ 
-https://www.w3schools.com/ 
 
 ### Languages
 - Python
@@ -245,32 +130,32 @@ https://www.w3schools.com/
 
 ### Frameworks and Libraries
 - Django (version)
-- Bootstrap/other CSS frameworks
-- JavaScript libraries used
+- Bootstrap
 
 ### Database
-- Database system used
-- Configuration details
+- Code Institute Postgres Database
+- Amazon S3 cloud storage (for images)
 
 ### Payment Processing
 - Stripe
-- Security considerations
 
 ### Other Tools
 - Version control (Git)
-- Development environment
-- Deployment platform
+- Development environment (Visual Studio Code)
+- Deployment platform (Github and Heroku)
 
+- JSHint
+- PEP8 Online
+- Lighthouse
+- Jason Formatter 
+- W3schools  
 
 
 ### Requirements 
 
 
+########
 
-### External Code Attribution
-- Clear separation between custom code and external sources
-- Attribution for all external code via comments
-- Library dependencies listed
 
 5.  Testing
 
@@ -304,23 +189,18 @@ https://www.w3schools.com/
 |Filtering |Category Filtering |Filters work correctly and update results |PASS |
 
 
-
-
 |Performace | | | |
 |---  | --- | --- |
 |Loading Speed |Page load times |Pages load within acceptable time |PASS |
 |Accessibility | | | |
-| | | | |
-
-<strong>Lighthouse</strong>
+|Responsivity | | | |
 
 
-- Test-driven development approach
-- Testing procedures followed
-- Coverage level achieved
-
-- Responsive design testing
-- Accessibility testing
+<details>
+    <summary>Lighthouse</summary>
+    <br>
+    <img src="" alt="">
+    </details>
 
 ### Responsive Testing
 - Browsers: Chrome, Firefox, Safari, Edge
@@ -338,7 +218,8 @@ https://www.w3schools.com/
 <details>
     <summary>CSS validation (Jigsaw)</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/css_validation_fail.jpg" alt="">
+    <img src="/readme_media/css_validation_pass.jpg" alt="">
     </details>
 
 
@@ -360,14 +241,10 @@ https://www.w3schools.com/
 - Known issues and their resolutions
 
 BUGS
-
 - Outstanding bugs (if any)
 
+<br>
 6.  Deployment
-
-### Live Site
-- Link to deployed application
-- Confirmation that deployed version matches development
 
 ### Heroku Deployment Process
 
@@ -391,41 +268,32 @@ BUGS
       import dj_database_url
       if os.path.isfile('env.py'):
       import env
+<br>
 
-Replace secret key placeholder with:
+    Replace secret key placeholder with:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
-  SECRET_KEY = os.environ.get('SECRET_KEY')
+    Create a Procfile within the top level of your directory
 
-Create a Procfile within the top level of your directory
+    Within the Procfile add:
 
-Within the Procfile add:
-
-  web: gunicorn project_name.wsgi
+    web: gunicorn project_name.wsgi
 
     Save all files and Make Migrations: python3 manage.py migrate
 
     Deploy the branch, when finished click on Open App to visit the live site.
 
+<br>
 
-Connect your Github Repo to the Heroku App
+    Connect your Github Repo to the Heroku App
 
-- Navigate to your deploy tab within your Heroku App
-- Select Github as the deployment method, and if prompted confirm that you want to connect to Github. Enter and search for the name of your chosen repository and click on Connect to link them. 
-- Return to the deploy tab of the app each time you push changes to Github. Scroll to the bottom and Manually deploy the app by clicking on 'Deploy Branch'. 
+    Navigate to your deploy tab within your Heroku App
 
+    Select Github as the deployment method, and if prompted confirm that you want to connect to Github. Enter and search for the name of your chosen repository and click on Connect to link them. 
 
+    Return to the deploy tab of the app each time you push changes to Github. 
+    Scroll to the bottom and Manually deploy the app by clicking on 'Deploy Branch'. 
 
-
-
-- Database deployment documentation
-- Environment variables setup
-- Configuration file management
-
-### Local Development Setup
-- Instructions for running locally
-- Requirements installation
-- Database setup
-- Environment configuration
 
 ### Security Considerations
 - Environment variables for sensitive data
@@ -438,29 +306,17 @@ Connect your Github Repo to the Heroku App
 - Different configurations for different environments
 - Data store configuration location
 
-7. Version Control
 
-### Git Usage
-- Repository structure
-- Commit message standards
-- Branching strategy
-- Development process documentation
-
-### Development Process
-- Clear commit history showing TDD approach
-- Individual commits for each feature/fix
-- No large commits that obscure development process
-- Configuration file versioning
-
-8. Credits
+<br>
+7. Credits and Acknowledgments
 
 ### Content Sources
-- Text content attribution
-- Image sources and credits
-- Data sources
+Images are from - WEBSITE - <br>
+-This site is just for educational purposes only.- 
+
 
 ### Code References
-- Tutorial or walkthrough acknowledgments
+- Code Institute Tutorials and walkthrough projects
 - Stack Overflow solutions used
 - Documentation references
 
@@ -468,23 +324,3 @@ Connect your Github Repo to the Heroku App
 - Mentor/tutor guidance
 - Peer support
 - External resources that influenced the project
-
----
-
-## Additional Documentation Considerations
-
-### README Quality Standards
-- Well-structured markdown formatting
-- Consistent formatting throughout
-- Clear section organization
-- Professional presentation
-- Few errors in spelling and grammar
-- Easy to follow and understand
-
-### Evidence of Craftsmanship
-- Code organization and cleanliness
-- Framework conventions followed
-- Security best practices implemented
-- Comprehensive error handling
-- Professional-grade user interface
-- Original work (not copy of walkthrough projects)
