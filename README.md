@@ -16,7 +16,7 @@
 This is an online fashion retail website specializing in women's clothing with a focus on a particular modern take on a cottagecore style. With the site featuring a curated collection of clothing and accessories.
 
 With the fashion e-commerce space dominated by fast fashion retailers offering overwhelming product selections that often lack cohesion. There's a clear opportunity for a curated, quality-focused alternative.
-The value the site provides to users is that it offers users a carefully curated selection of cohesive, clothing and accessory pieces, making outfit planning easier. Whilst delivering a seamless shopping experience with professional product photography, 
+The value the site provides to users is that it offers users a carefully curated selection of cohesive, clothing and accessory pieces, making outfit planning easier. Whilst delivering a seamless shopping experience with professional product photography.
 
 <strong>Target audience</strong><br>
 The ideal target audience for the site is individuals who value quality over fast fashion trends, those looking for coordinated wardrobe pieces that could also be utilized as individual statement items.
@@ -27,23 +27,14 @@ With growing consumer awareness about sustainable fashion and quality clothing h
 2. User Experience (UX)
 
 ### Design Process
-- UX design work undertaken
-- Reasoning behind design decisions
-- Information hierarchy considerations
-- User control principles applied
-- Consistency across the application
-- Accessibility guidelines followed
-
-Streamlined shopping experience 
 
 - The minimilst design interface prioritizes product visibility and easy navigation over flashy design elements, allowing the clothing to be the focal point and reducing visual clutter that can overwhelm users.
-- A cohesive identity creates a strong brand identity that ????
-
-
+- A cohesive identity creates a strong reliable brand identity 
+- Responsive design prioritizing mobile devices with adaptive templates
+- Collapsible navigation menu optimized for mobile interfaces
+- Intuitive, accessible interface designed for optimal readability and a streamlined shopping experience 
 - User control features -- adding and subtacting to the bag, personal information, ability to create a user profile 
-
-
-With toasts keeping in line with the chosen aesthetics of the site, confirmation and feedback toasts from the system???
+- Confirmation and feedback toasts for user feedback keep in line with the chosen aesthetics of the site
 
 
 3. Features
@@ -56,8 +47,9 @@ With toasts keeping in line with the chosen aesthetics of the site, confirmation
     - Responsive design implementation
 
 ### Future Features
-- Planned enhancements
-- Additional functionality considerations ?????
+- Future enhancements/ expansions of features may include the site branching out into childrens wear.
+- Discount codes
+- Delivery Tracking
 
 ### Apps Structure
 <strong>My apps</strong>
@@ -68,14 +60,6 @@ With toasts keeping in line with the chosen aesthetics of the site, confirmation
 - Profiles 
 <br>
 
-<strong>How each app represents a natural aspect of the project</strong>
-
-<strong>Explanation of app separation logic</strong>
-
-<strong>Shared data between apps (no duplication)</strong>
-
-
-<br>
 4. Data Schema
 <br>
 <details>
@@ -112,13 +96,11 @@ The comprehensive product catalog model containing all product information inclu
 
 - User profile link: Order model validates user_profile exists if provided (for registered users)
 
-
-<strong>Data Validation/ Security with Stripe</strong>
-
+- Data Validation/ Security with Stripe
 
 ### CRUD Operations
-- Shop owner CRUD functionality 
-- Site user/ client CRUD functionality
+Site/Shop owner has CRUD functionality to create, view, edit and delete products for the site. 
+The Site user/ client CRUD functionality is to add, edit and delete products from the bag.
 
 5.  Technologies Used
 
@@ -145,17 +127,23 @@ The comprehensive product catalog model containing all product information inclu
 - Deployment platform (Github and Heroku)
 
 - JSHint
-- PEP8 Online
+- Pylint
 - Lighthouse
 - Jason Formatter 
 - W3schools  
 
 
 ### Requirements 
-
-
-########
-
+- boto3==1.38.46
+- dj-database-url==0.5.0
+- Django==3.2.25
+- django-allauth==0.50.0
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- django-storages==1.14.6
+- gunicorn==23.0.0
+- psycopg2==2.9.10
+- stripe==12.2.0
 
 5.  Testing
 
@@ -192,14 +180,14 @@ The comprehensive product catalog model containing all product information inclu
 |Performace | | | |
 |---  | --- | --- |
 |Loading Speed |Page load times |Pages load within acceptable time |PASS |
-|Accessibility | | | |
-|Responsivity | | | |
+|Responsivity | Responsivity| Teested on several screensizes through chrome developer tools| Pass |
 
 
 <details>
     <summary>Lighthouse</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/initial_lighthouse_report.jpg" alt="">
+    <img src="/readme_media/higher_lighthouse_report.jpg" alt="">
     </details>
 
 ### Responsive Testing
@@ -212,7 +200,7 @@ The comprehensive product catalog model containing all product information inclu
     <summary>HTML validation (W3C)</summary>
     <br>
     <img src="" alt="">
-    </details>
+    </details> HERE
 
 
 <details>
@@ -226,14 +214,16 @@ The comprehensive product catalog model containing all product information inclu
 <details>
     <summary>JavaScript validation (JSHint)</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/jshint_stripe_validation.jpg" alt="">
+    <img src="/readme_media/countryfield_jshint_validation.jpg" alt="">
     </details>
 
 
 <details>
-    <summary>Python code style (PEP8)</summary>
+    <summary>Python code style (Pylint)</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/pylint_first_validation.jpg" alt="">
+    <img src="/readme_media/pylint_validation_success.jpg" alt="">
     </details>
 
 
@@ -241,7 +231,7 @@ The comprehensive product catalog model containing all product information inclu
 - Known issues and their resolutions
 
 BUGS
-- Outstanding bugs (if any)
+- The are no outstanding bugs to my knowledge
 
 <br>
 6.  Deployment
@@ -294,30 +284,16 @@ BUGS
     Return to the deploy tab of the app each time you push changes to Github. 
     Scroll to the bottom and Manually deploy the app by clicking on 'Deploy Branch'. 
 
-
-### Security Considerations
-- Environment variables for sensitive data
-- Debug mode configuration
-- Password and secret key management
-- User permission levels
-
-### Configuration Management
-- Settings file organization
-- Different configurations for different environments
-- Data store configuration location
-
-
-<br>
 7. Credits and Acknowledgments
 
 ### Content Sources
-Images are from - WEBSITE - <br>
+Images are from - https://mymum-madeit.com/ - <br>
 -This site is just for educational purposes only.- 
 
 
 ### Code References
 - Code Institute Tutorials and walkthrough projects
-- Stack Overflow solutions used
+
 - Documentation references
 
 ### Acknowledgments
