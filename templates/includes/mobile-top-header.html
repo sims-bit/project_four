@@ -1,11 +1,11 @@
 <div class="list-inline-item dropdown nav-item">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+    <a class="text-black nav-link d-block d-lg-none" href="#" id="shop-options" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <p class="my-0">SHOP</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0" aria-labelledby="shop-options">
         <a href="{% url 'products' %}?category=new" class="dropdown-item">
             NEW
         </a>
@@ -77,13 +77,13 @@
     </div>
 </div>
 <div class="list-inline-item dropdown">
-    <a class="nav-link d-block d-lg-none" href="#" id="account-options" data-toggle="dropdown" aria-haspopup="true"
+    <a class="nav-link d-block d-lg-none" href="#" id="account-dropdown" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <div class="text-center">
             <p class="my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="account-options">
+    <div class="dropdown-menu border-0" aria-labelledby="account-dropdown">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

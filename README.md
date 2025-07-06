@@ -199,7 +199,9 @@ The Site user/ client CRUD functionality is to add, edit and delete products fro
 <details>
     <summary>HTML validation (W3C)</summary>
     <br>
-    <img src="" alt="">
+    <img src="/readme_media/html_validation.jpg">
+    <img src="/readme_media/html_complete validation.jpg" alt="">
+    <p>You are able to see that the warnings occur in the full validation from the joining of the</p>
     </details> HERE
 
 
